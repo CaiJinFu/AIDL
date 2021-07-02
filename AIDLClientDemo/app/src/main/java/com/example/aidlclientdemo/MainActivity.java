@@ -1,7 +1,5 @@
 package com.example.aidlclientdemo;
 
-import java.util.List;
-
 import android.app.Service;
 import android.content.ComponentName;
 import android.content.Intent;
@@ -18,6 +16,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.aidlservicedemo.IAdd;
 import com.example.aidlservicedemo.IPlayListener;
 import com.example.aidlservicedemo.Person;
+
+import java.util.List;
 /**
  * 主界面
  * 
@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 			Intent intent = new Intent(IAdd.class.getName());
 			intent.setAction("service.calc");
 			intent.setPackage("com.example.aidlservicedemo");
+			bindService(intent, serviceConnection, Service.BIND_AUTO_CREATE);
 			bindService(intent, serviceConnection, Service.BIND_AUTO_CREATE);
 		}
 	}
