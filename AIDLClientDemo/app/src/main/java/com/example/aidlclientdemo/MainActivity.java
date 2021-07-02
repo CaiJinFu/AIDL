@@ -65,7 +65,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 			intent.setAction("service.calc");
 			intent.setPackage("com.example.aidlservicedemo");
 			bindService(intent, serviceConnection, Service.BIND_AUTO_CREATE);
-			bindService(intent, serviceConnection, Service.BIND_AUTO_CREATE);
 		}
 	}
 
