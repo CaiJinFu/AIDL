@@ -30,23 +30,23 @@ public class AddService extends Service {
   public IAdd.Stub mBinder =
       new IAdd.Stub() {
         @Override
-        public int addNumbers(int num1, int num2) throws RemoteException {
+        public int addNumbers(int num1, int num2) {
           Log.d("TAG", "addNumbers() called with: num1 = [" + num1 + "], num2 = [" + num2 + "]");
           return num1 + num2;
         }
 
         @Override
-        public List<String> getStringList() throws RemoteException {
+        public List<String> getStringList() {
           return getList();
         }
 
         @Override
-        public List<Person> getPersonList() throws RemoteException {
+        public List<Person> getPersonList() {
           return getPersons();
         }
 
         @Override
-        public void placeCall(String number) throws RemoteException {
+        public void placeCall(String number) {
           Intent intent = new Intent(Intent.ACTION_CALL);
           intent.setData(Uri.parse("tel:" + number));
           intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
