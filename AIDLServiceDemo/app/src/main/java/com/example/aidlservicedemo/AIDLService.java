@@ -47,28 +47,21 @@ public class AIDLService extends Service {
 
         @Override
         public void placeCall(String number) {
-          Intent intent = new Intent(Intent.ACTION_CALL);
-          intent.setData(Uri.parse("tel:" + number));
-          intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-          intent.addFlags(Intent.FLAG_FROM_BACKGROUND);
+          // 检查权限，没有权限则在通知栏提示
           if (ActivityCompat.checkSelfPermission(
                   getApplicationContext(), Manifest.permission.CALL_PHONE)
               != PackageManager.PERMISSION_GRANTED) {
 
-            Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
-            // use System.currentTimeMillis() to have a unique ID for the pending intent
-            PendingIntent pIntent =
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            PendingIntent pendingIntent =
                 PendingIntent.getActivity(
-                    getApplicationContext(), (int) System.currentTimeMillis(), intent1, 0);
-
-            // build notification
-            // the addAction re-use the same intent to keep the example short
+                    getApplicationContext(), (int) System.currentTimeMillis(), intent, 0);
             Notification n =
                 new Notification.Builder(getApplicationContext())
                     .setContentTitle("AIDL Server App")
                     .setContentText("Please grant call permission from settings")
                     .setSmallIcon(R.drawable.ic_launcher)
-                    .setContentIntent(pIntent)
+                    .setContentIntent(pendingIntent)
                     .setAutoCancel(true)
                     .build();
 
@@ -78,6 +71,11 @@ public class AIDLService extends Service {
             notificationManager.notify(0, n);
             return;
           }
+          // 拨打电话
+          Intent intent = new Intent(Intent.ACTION_CALL);
+          intent.setData(Uri.parse("tel:" + number));
+          intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+          intent.addFlags(Intent.FLAG_FROM_BACKGROUND);
           startActivity(intent);
         }
 
