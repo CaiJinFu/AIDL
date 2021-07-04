@@ -13,8 +13,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.aidlservicedemo.IAdd;
 import com.example.aidlservicedemo.IPlayListener;
+import com.example.aidlservicedemo.ITest;
 import com.example.aidlservicedemo.Person;
 
 import java.util.List;
@@ -38,17 +38,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
           }
         }
       };
-  private IAdd mIAdd;
+  private ITest iTest;
   private final ServiceConnection serviceConnection =
       new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-          mIAdd = IAdd.Stub.asInterface(service);
+          iTest = ITest.Stub.asInterface(service);
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-          mIAdd = null;
+          iTest = null;
         }
       };
   private TextView m1Tv;
@@ -62,8 +62,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     initView();
-    if (mIAdd == null) {
-      Intent intent = new Intent(IAdd.class.getName());
+    if (iTest == null) {
+      Intent intent = new Intent(ITest.class.getName());
       intent.setAction("service.calc");
       intent.setPackage("com.example.aidlservicedemo");
       bindService(intent, serviceConnection, Service.BIND_AUTO_CREATE);
@@ -92,29 +92,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
   @Override
   public void onClick(View v) {
-    if (mIAdd != null) {
+    if (iTest != null) {
       try {
         int id = v.getId();
         if (id == R.id.tv_1) {
           // addNumbers
-          int addNumbers = mIAdd.addNumbers(11, 13);
+          int addNumbers = iTest.addNumbers(11, 13);
           Log.i("TAG", "addNumbers: " + addNumbers);
         } else if (id == R.id.tv_2) {
           // getStringList
-          List<String> stringList = mIAdd.getStringList();
+          List<String> stringList = iTest.getStringList();
           Log.i("TAG", "StringList: " + stringList.toString());
         } else if (id == R.id.tv_3) {
           // getPersonList
-          List<Person> personList = mIAdd.getPersonList();
+          List<Person> personList = iTest.getPersonList();
           for (Person person : personList) {
             Log.i("TAG", "PersonName: " + person.name);
           }
         } else if (id == R.id.tv_4) {
           // placeCall
-          mIAdd.placeCall("12454567");
+          iTest.placeCall("12454567");
         } else if (id == R.id.tv_5) {
           // placeCall
-          mIAdd.involved(mPlayListener);
+          iTest.involved(mPlayListener);
         }
       } catch (RemoteException e) {
         e.printStackTrace();

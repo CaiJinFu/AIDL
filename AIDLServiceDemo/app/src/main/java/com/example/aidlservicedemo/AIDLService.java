@@ -25,13 +25,13 @@ import java.util.List;
  * @author Jin
  * @since 2021/7/1
  */
-public class AddService extends Service {
+public class AIDLService extends Service {
 
-  public IAdd.Stub mBinder =
-      new IAdd.Stub() {
+  public ITest.Stub mBinder =
+      new ITest.Stub() {
         @Override
         public int addNumbers(int num1, int num2) {
-          Log.d("TAG", "addNumbers() called with: num1 = [" + num1 + "], num2 = [" + num2 + "]");
+          Log.i("TAG", "addNumbers() called with: num1 = [" + num1 + "], num2 = [" + num2 + "]");
           return num1 + num2;
         }
 

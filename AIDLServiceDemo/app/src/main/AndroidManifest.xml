@@ -18,7 +18,7 @@
       </intent-filter>
     </activity>
     <service
-        android:name=".AddService"
+        android:name=".AIDLService"
         android:enabled="true"
         android:exported="true"
         android:process=":remote">
