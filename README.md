@@ -1,4 +1,3 @@
-[toc]
 # AIDL
 
 aidl是Android进程间通信的一种方式，下面就介绍一个如何实现客户端与服务端的AIDL。
