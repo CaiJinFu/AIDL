@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 			intent.setPackage("com.example.aidlservicedemo");
 			bindService(intent, serviceConnection, Service.BIND_AUTO_CREATE);
 		}
+    Log.i("TAG", "onCreate: ");
 	}
 
 	private void initView() {
