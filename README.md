@@ -8,12 +8,12 @@ aidl是Android进程间通信的一种方式，下面就介绍一个如何实现
 
 ### 1.首先创建一个AIDL文件
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210704172918141.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX0ppbmdGdQ==,size_16,color_FFFFFF,t_70#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210704172955103.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX0ppbmdGdQ==,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/63b29b6d753f244bcc8a7bda227b360e.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/278e346db32e3c07717a5ba98256c71d.png#pic_center)
 
 文件名可以随便取，这里取一个ITest，点击finish之后，就会出现一个aidl的目录。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210704173032731.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX0ppbmdGdQ==,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/80e8e9e8411c7107bd3c4f3e2a44060f.png#pic_center)
 
 **ITest.aidl**
 
@@ -109,11 +109,11 @@ parcelable Person;
 
 此时点一下make project，就是那个小锤子，编译一下，会生成一些相关aidl的文件。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210704173055599.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX0ppbmdGdQ==,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1e54c71a54a8ab793e7844de8bd947bd.png#pic_center)
 
 ### 3.编写一个服务类
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210704173112870.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX0ppbmdGdQ==,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b8128e9eed25b48cda9ab5f2b9efe215.png#pic_center)
 
 名字可以随便取，这里取名为AIDLService。在service清单文件中添加如下信息。
 
@@ -268,13 +268,13 @@ public class AIDLService extends Service {
 
 ### 2.创建Person类
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210704173137595.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX0ppbmdGdQ==,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/95b99263f23bc512dc08d74a9a4c0260.png#pic_center)
 
 如图所示，包名要跟服务端的一致，否则是无效的。
 
 ### 3.make project
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021070417320782.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX0ppbmdGdQ==,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7cf1d801c2cbbb7d73e5bc710c5b3c2b.png#pic_center)
 
 ### 4.调用服务端
 
