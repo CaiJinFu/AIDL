@@ -420,4 +420,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 [https://github.com/CaiJinFu/AIDL](https://github.com/CaiJinFu/AIDL)
 
-[AIDL通信实例]([https://github.com/CaiJinFu/AIDL](https://blog.csdn.net/Mr_JingFu/article/details/118464663?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522d6ae1789605ace61169d9878801fd4ce%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=d6ae1789605ace61169d9878801fd4ce&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-1-118464663-null-null.nonecase&utm_term=AIDL&spm=1018.2226.3001.4450))
+[AIDL通信实例]([https://github.com/CaiJinFu/AIDL](https://blog.csdn.net/Mr_JingFu/article/details/118464663?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522d6ae1789605ace61169d9878801fd4ce%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=d6ae1789605ace61169d9878801fd4ce&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-1-118464663-null-null.nonecase&utm_term=AIDL&spm=1018.2226.3001.4450)
