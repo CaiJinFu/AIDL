@@ -7,8 +7,8 @@ aidl是Android进程间通信的一种方式，下面就介绍一个如何实现
 新建一个service的项目。
 
 ### 1.首先创建一个AIDL文件
+![image](https://github.com/user-attachments/assets/f2c2deb0-f286-4fe0-b511-5f15c8bc5958)
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/63b29b6d753f244bcc8a7bda227b360e.png#pic_center)
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/278e346db32e3c07717a5ba98256c71d.png#pic_center)
 
 文件名可以随便取，这里取一个ITest，点击finish之后，就会出现一个aidl的目录。
@@ -419,3 +419,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 运行项目，至此完成。建议下载项目运行一下。
 
 [https://github.com/CaiJinFu/AIDL](https://github.com/CaiJinFu/AIDL)
+
+[AIDL通信实例]([https://github.com/CaiJinFu/AIDL](https://blog.csdn.net/Mr_JingFu/article/details/118464663?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522d6ae1789605ace61169d9878801fd4ce%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=d6ae1789605ace61169d9878801fd4ce&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-1-118464663-null-null.nonecase&utm_term=AIDL&spm=1018.2226.3001.4450))
