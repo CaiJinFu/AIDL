@@ -9,13 +9,28 @@
     tools:context=".MainActivity"
     >
 
+  <!-- 传统服务连接按钮 -->
+  <TextView
+      android:id="@+id/tv_connect_traditional"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:gravity="center"
+      android:text="点击连接传统服务"
+      android:textSize="18sp"
+      android:background="#FFEB3B"
+      android:textColor="#000000"
+      />
+
   <TextView
       android:id="@+id/tv_1"
       android:layout_width="match_parent"
       android:layout_height="50dp"
       android:gravity="center"
-      android:text="addNumbers"
+      android:text="传统-加法服务"
       android:textSize="18sp"
+      android:enabled="false"
+      android:background="#4CAF50"
+      android:textColor="#FFFFFF"
       />
 
   <TextView
@@ -23,8 +38,11 @@
       android:layout_width="match_parent"
       android:layout_height="50dp"
       android:gravity="center"
-      android:text="getStringList"
+      android:text="传统-字符串服务"
       android:textSize="18sp"
+      android:enabled="false"
+      android:background="#2196F3"
+      android:textColor="#FFFFFF"
       />
 
   <TextView
@@ -32,8 +50,11 @@
       android:layout_width="match_parent"
       android:layout_height="50dp"
       android:gravity="center"
-      android:text="getPersonList"
+      android:text="传统-人员服务"
       android:textSize="18sp"
+      android:enabled="false"
+      android:background="#FF9800"
+      android:textColor="#FFFFFF"
       />
 
   <TextView
@@ -41,8 +62,11 @@
       android:layout_width="match_parent"
       android:layout_height="50dp"
       android:gravity="center"
-      android:text="placeCall"
+      android:text="传统-回调服务"
       android:textSize="18sp"
+      android:enabled="false"
+      android:background="#9C27B0"
+      android:textColor="#FFFFFF"
       />
 
   <TextView
@@ -50,8 +74,62 @@
       android:layout_width="match_parent"
       android:layout_height="50dp"
       android:gravity="center"
-      android:text="involved"
+      android:text="传统-状态测试"
       android:textSize="18sp"
+      android:enabled="false"
+      android:background="#607D8B"
+      android:textColor="#FFFFFF"
+      />
+
+  <!-- 新增按钮用于区分不同服务 -->
+  <TextView
+      android:id="@+id/tv_6"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:gravity="center"
+      android:text="连接池-加法服务"
+      android:textSize="18sp"
+      android:background="#E3F2FD"
+      />
+
+  <TextView
+      android:id="@+id/tv_7"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:gravity="center"
+      android:text="连接池-字符串服务"
+      android:textSize="18sp"
+      android:background="#E8F5E8"
+      />
+
+  <TextView
+      android:id="@+id/tv_8"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:gravity="center"
+      android:text="连接池-人员服务"
+      android:textSize="18sp"
+      android:background="#FFF3E0"
+      />
+
+  <TextView
+      android:id="@+id/tv_9"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:gravity="center"
+      android:text="连接池-回调服务"
+      android:textSize="18sp"
+      android:background="#FCE4EC"
+      />
+
+  <TextView
+      android:id="@+id/tv_10"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:gravity="center"
+      android:text="测试连接池状态"
+      android:textSize="18sp"
+      android:background="#F3E5F5"
       />
 
 </LinearLayout>

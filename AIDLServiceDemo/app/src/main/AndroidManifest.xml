@@ -33,6 +33,16 @@
         <action android:name="service.calc" />
       </intent-filter>
     </service>
+
+    <service
+      android:name=".BinderPoolService"
+      android:enabled="true"
+      android:exported="true"
+      android:process=":binderpool">
+      <intent-filter>
+        <action android:name="binder.pool.service" />
+      </intent-filter>
+    </service>
   </application>
 
 </manifest>
